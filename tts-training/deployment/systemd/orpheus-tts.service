@@ -1,0 +1,17 @@
+[Unit]
+Description=Orpheus epoch-3 approved 4-bit streaming TTS
+Conflicts=cesame-tts.service orpheus-tts-16bit.service
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/voiceuser/projects/orpheus-lora
+Environment=PYTHONUNBUFFERED=1
+Environment=HF_HUB_OFFLINE=1
+ExecStart=/home/voiceuser/projects/orpheus-lora/stream-benchmark/.venv/bin/python /home/voiceuser/projects/orpheus-lora/scripts/stream_server.py --precision 4bit --codec cuda --port 8812
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=300
+
+[Install]
+WantedBy=default.target

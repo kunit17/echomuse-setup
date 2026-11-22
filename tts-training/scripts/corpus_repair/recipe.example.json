@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "policy": {
+    "quiet_seconds": 0.3,
+    "edge_seconds": 0.12,
+    "vad_padding_seconds": 0.08,
+    "vad_threshold": 0.35,
+    "quiet_rms_floor": 0.0005,
+    "quiet_rms_ceiling": 0.004,
+    "quiet_speech_ratio": 0.025,
+    "preferred_seconds": 8,
+    "max_seconds": 35,
+    "alignment_first_last_score": 0.35,
+    "alignment_word_score": 0.2,
+    "independent_max_word_error_rate": 0.15,
+    "minimum_aligned_start_margin": 0.1,
+    "minimum_aligned_end_margin": 0.12,
+    "partition_guard_seconds": 5,
+    "previous_owner_exclusions_preserved": true
+  },
+  "sources": {
+    "recording": {
+      "path": "/path/to/your-authorized-recording.wav",
+      "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+    }
+  },
+  "partitions": {
+    "recording": {
+      "train": [
+        [
+          0,
+          800
+        ]
+      ],
+      "validation": [
+        [
+          805,
+          900
+        ]
+      ]
+    }
+  },
+  "exclusions": {
+    "recording": []
+  }
+}

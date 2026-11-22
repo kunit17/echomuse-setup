@@ -1,0 +1,26 @@
+--- a/scripts/stream_server.py
++++ b/scripts/stream_server.py
+@@ -16,7 +16,9 @@
+ parser=argparse.ArgumentParser();parser.add_argument('--precision',choices=['16bit','4bit'],required=True)
+ parser.add_argument('--eager',action='store_true');parser.add_argument('--codec',choices=['cpu','cuda'],default='cpu')
+ parser.add_argument('--port',type=int,choices=[8812,8813],default=8813)
++parser.add_argument('--kv-cache-mib',type=int,default=1024,help='GPU generation cache; default 1 GiB for one voice request')
+ args=parser.parse_args();B=ROOT/'stream-benchmark';started=time.monotonic()
++if args.kv_cache_mib<1024:parser.error('--kv-cache-mib must be at least 1024 for the 4096-token context')
+ torch.set_num_threads(4)
+ codec=SNAC.from_pretrained(snapshot_download(CODEC,revision=setup()['model_revisions'][CODEC],local_files_only=True)).to(args.codec).eval()
+ tokenizer=AutoTokenizer.from_pretrained(B/'merged-epoch3',local_files_only=True)
+@@ -24,11 +26,12 @@
+ assert sha(Path(selection['adapter_path'])/'adapter_model.safetensors')==selection['adapter_sha256']
+ assert json.loads((B/'merged-epoch3/provenance.json').read_text())['selection']['adapter_sha256']==selection['adapter_sha256']
+ options=dict(model=str(B/'merged-epoch3'),dtype='bfloat16',max_model_len=4096,max_num_seqs=1,
+-    enforce_eager=args.eager,disable_log_stats=True)
++    enforce_eager=args.eager,disable_log_stats=True,gpu_memory_utilization=0.5,kv_cache_memory_bytes=args.kv_cache_mib*1024**2)
+ if args.precision=='4bit':options['quantization']='bitsandbytes'
+ engine=None
+ health=dict(ready=False,precision=args.precision,eager=args.eager,codec=args.codec,
+     model='Orpheus',model_loaded=True,runtime='vllm-streaming',port=args.port,
++    kv_cache_mib=args.kv_cache_mib,max_model_len=4096,max_num_seqs=1,
+     playback_buffer_seconds=1.0,text_policy='sentences-v1',
+     load_seconds=time.monotonic()-started,pid=os.getpid(),epoch=3,
+     adapter_sha256=json.loads((ROOT/'selected-model.json').read_text())['adapter_sha256'])

@@ -1,0 +1,11 @@
+[Unit]
+Description=She cleaned-corpus convergence-based retraining and verification
+[Service]
+Type=simple
+WorkingDirectory=/home/voiceuser/projects/gpt-sovits
+ExecStart=/bin/bash /home/voiceuser/projects/gpt-sovits/scripts/run_retraining.sh
+StandardOutput=append:/home/voiceuser/projects/gpt-sovits/logs/retrain-driver.log
+StandardError=append:/home/voiceuser/projects/gpt-sovits/logs/retrain-driver.log
+TimeoutStopSec=120
+[Install]
+WantedBy=default.target

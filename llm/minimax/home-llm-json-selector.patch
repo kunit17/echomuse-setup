@@ -1,0 +1,14 @@
+--- a/custom_components/llama_conversation/config_flow.py
++++ b/custom_components/llama_conversation/config_flow.py
+@@ -1,5 +1,10 @@
+ def _kv_pairs(values: Any) -> list[dict[str, Any]]:
+     """Convert a stored key/value dict into the object selector's list format."""
+     if isinstance(values, dict):
+-        return [{"key": key, "value": value} for key, value in values.items()]
++        # TextSelector requires strings; preserve nested request values as JSON.
++        import json
++        return [
++            {"key": key, "value": value if isinstance(value, str) else json.dumps(value)}
++            for key, value in values.items()
++        ]
+     return values if isinstance(values, list) else []

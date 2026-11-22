@@ -1,0 +1,31 @@
+"""Record selected model, service compatibility, retention and runbook changes."""
+from common import *
+import shutil,subprocess
+source=Path('/mnt/c/Users/DesktopUser/Projects/echomuse-provisioning/tts-training/orpheus-training')
+for name in ['record.py','save_deployment.py']:shutil.copy2(source/name,ROOT/'scripts'/name)
+shutil.copy2(source/'ACTIVATION.md',ROOT/'ACTIVATION.md')
+readme=ROOT/'README.md';text=readme.read_text()
+text=text.replace('CSM is stopped\nfor GPU work and restored after the pipeline. The selected CSM deployment and\nreference are not changed.','For future GPU work, stop the selected voice service first and restore it afterward. The owner selected Orpheus epoch 3 as main voice; see ACTIVATION.md.')
+if '## On-demand activation' not in text:text+='\n## On-demand activation\n\nOrpheus epoch 3 is the main model. Read ACTIVATION.md. `orpheus start|stop|status` controls the warm service; `orpheus sample` reuses it.\n'
+readme.write_text(text)
+guide=REPO/'TTS_WORKFLOW.md';text=guide.read_text()
+text=text.replace('| Owner-selected model | `/home/voiceuser/projects/csm-lora/models/she-repaired-epoch5` |','| Owner-selected model | Orpheus epoch 3: `/home/voiceuser/projects/orpheus-lora/runs/orpheus-v1-example01/adapter-final`; CSM v1 epoch 5 retained as fallback |')
+text=text.replace('| Generation reference | `original-f545f69a5a219242`, 8.125 seconds |','| Generation reference | Orpheus: none. CSM fallback: `original-f545f69a5a219242`, 8.125 seconds |')
+text=text.replace('The saved deployment remains\nv1 epoch 5.','The saved CSM fallback remains\nv1 epoch 5. Orpheus epoch 3 is now the selected main model.')
+text=text.replace('and `csm-lora/selected-model.json` for the deployment selection.','and `selected-tts-model.json` for the main deployment selection (`csm-lora/selected-model.json` describes only the CSM fallback).')
+text=text.replace('temporarily stops the CSM voice service','temporarily stops the selected voice service')
+text=text.replace('Current owner selection is epoch 5; epoch 2 remains the best-validation result.','The retained CSM fallback selection is epoch 5; CSM epoch 2 remains its best-validation result. The main model is Orpheus epoch 3.')
+text=text.replace('CSM stays the selected deployment.','Orpheus epoch 3 is the owner-selected main model. Activation: `orpheus start`, `orpheus stop`, `orpheus status`; `orpheus sample` reuses the warm service. See `/home/voiceuser/projects/orpheus-lora/ACTIVATION.md` and `selected-tts-model.json`. Stop Orpheus before GPU training/preparation and restore it afterward.')
+text=text.replace('systemctl --user stop cesame-tts.service\nrm -- PAUSED_BY_OWNER','systemctl --user stop orpheus-tts.service cesame-tts.service\nrm -- PAUSED_BY_OWNER')
+guide.write_text(text);shutil.copy2(guide,source.parent/'TTS_WORKFLOW.md')
+supervisor=REPO/'scripts/corpus_repair/run.py';text=supervisor.read_text()
+text=text.replace("    restore=subprocess.run(['systemctl','--user','is-active','--quiet','cesame-tts.service']).returncode==0", "    selection=ROOT/'selected-tts-model.json'\n    service=json.loads(selection.read_text()).get('service','cesame-tts.service') if selection.exists() else 'cesame-tts.service'\n    assert service in ('cesame-tts.service','orpheus-tts.service')\n    restore=subprocess.run(['systemctl','--user','is-active','--quiet',service]).returncode==0")
+text=text.replace("if state_path.exists():restore=restore or json.loads(state_path.read_text()).get('restore_csm_service',False)","if state_path.exists():\n        previous=json.loads(state_path.read_text())\n        restore=restore or (previous.get('service','cesame-tts.service')==service and previous.get('restore_service',previous.get('restore_csm_service',False)))")
+text=text.replace("restore_csm_service=restore,status=", "service=service,restore_service=restore,status=")
+text=text.replace("'stop','cesame-tts.service'","'stop',service").replace("'--no-block','cesame-tts.service'","'--no-block',service")
+supervisor.write_text(text)
+target=REPO/'scripts/orpheus'
+for path in (ROOT/'scripts').glob('*.py'):shutil.copy2(path,target/path.name)
+for name in ['README.md','ACTIVATION.md']:shutil.copy2(ROOT/name,target/name)
+atomic(REPO/'reports/orpheus-deployment-20261118.json',dict(selection=json.loads((ROOT/'selected-model.json').read_text()),cleanup=json.loads((ROOT/'storage-cleanup.json').read_text()),warm_smoke=json.loads((ROOT/'samples/service-epoch3-check.json').read_text())))
+print('Deployment instructions and source saved; no training or data changes.')

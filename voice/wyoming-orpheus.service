@@ -1,0 +1,15 @@
+[Unit]
+Description=EchoMuse streaming Orpheus Wyoming adapter
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/projects/echomuse-provisioning
+Environment=PYTHONUNBUFFERED=1
+ExecStart=%h/.local/share/echomuse-voice/tts-venv/bin/python %h/projects/echomuse-provisioning/voice/orpheus_adapter.py --selection %h/projects/orpheus-lora/selected-model.json
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+
+[Install]
+WantedBy=default.target

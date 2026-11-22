@@ -1,0 +1,26 @@
+{
+  "scope": "tracked public source only; fresh Git history",
+  "excluded": [
+    "credentials",
+    "private history",
+    "runtime databases",
+    "personal topology",
+    "owner logs",
+    "recordings",
+    "model weights",
+    "corpus transcripts/manifests",
+    "training approvals",
+    "local uncommitted changes"
+  ],
+  "checks": {
+    "gitleaks_version": "8.30.1",
+    "gitleaks_findings": 0,
+    "privacy_audit_findings": 0,
+    "owner_identifier_matches": 0,
+    "python_and_json_syntax": "passed",
+    "shell_syntax": "passed",
+    "adapter_cpu_tests": 10,
+    "fresh_machine_gpu_hardware_install": "not executed"
+  },
+  "limitations": "Automated scanning cannot prove arbitrary text is entirely free of sensitive information. Model/data prerequisites and physical-device checks must be supplied and verified by each user."
+}

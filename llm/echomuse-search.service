@@ -1,0 +1,15 @@
+[Unit]
+Description=EchoMuse public web search MCP server (loopback only)
+After=network-online.target
+
+[Service]
+ExecStart=%h/.local/share/echomuse-llm-venv/bin/python %h/projects/echomuse-provisioning/llm/search_server.py
+WorkingDirectory=%h/projects/echomuse-provisioning
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+UMask=0077
+
+[Install]
+WantedBy=default.target

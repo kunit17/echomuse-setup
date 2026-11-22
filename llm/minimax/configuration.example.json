@@ -1,0 +1,18 @@
+{
+  "endpoint": "https://api.minimax.io/v1",
+  "model": "MiniMax-M3",
+  "enable_streaming": true,
+  "max_new_tokens": 1024,
+  "request_timeout": 90,
+  "max_tool_call_iterations": 3,
+  "in_context_examples": false,
+  "extra_body": {
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "device_control_api": "assist",
+  "default_music_player_name": "YOUR_UNIQUE_MUSIC_ASSISTANT_PLAYER",
+  "weather_entity": "weather.home",
+  "api_key": "ENTER_PRIVATELY_IN_HOME_ASSISTANT"
+}

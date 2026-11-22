@@ -1,0 +1,1276 @@
+[
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "001.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "002.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "003.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "004.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "005.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "006.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "007.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "008.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "009.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "010.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "011.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "012.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft David Desktop",
+    "rate": -1,
+    "file": "013.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "014.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "015.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "016.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "017.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "018.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "019.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "020.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "021.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "022.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "023.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "024.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "025.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft David Desktop",
+    "rate": 1,
+    "file": "026.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "027.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "028.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "029.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "030.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "031.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "032.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "033.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "034.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "035.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "036.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "037.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "038.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1,
+    "file": "039.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "040.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "041.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "042.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "043.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "044.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "045.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "046.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "047.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "048.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "049.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "050.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "051.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 1,
+    "file": "052.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "053.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "054.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "055.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "056.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "057.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "058.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "059.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "060.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "061.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "062.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "063.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "064.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft David",
+    "rate": -1,
+    "file": "065.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "066.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "067.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "068.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "069.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "070.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "071.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "072.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "073.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "074.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "075.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "076.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "077.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft David",
+    "rate": 1,
+    "file": "078.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "079.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "080.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "081.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "082.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "083.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "084.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "085.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "086.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "087.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "088.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "089.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "090.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Alex",
+    "rate": -1,
+    "file": "091.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "092.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "093.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "094.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "095.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "096.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "097.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "098.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "099.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "100.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "101.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "102.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "103.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Alex",
+    "rate": 1,
+    "file": "104.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "105.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "106.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "107.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "108.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "109.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "110.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "111.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "112.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "113.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "114.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "115.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "116.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Linda",
+    "rate": -1,
+    "file": "117.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "118.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "119.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "120.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "121.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "122.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "123.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "124.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "125.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "126.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "127.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "128.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "129.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Linda",
+    "rate": 1,
+    "file": "130.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "131.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "132.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "133.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "134.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "135.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "136.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "137.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "138.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "139.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "140.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "141.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "142.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Mark",
+    "rate": -1,
+    "file": "143.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "144.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "145.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "146.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "147.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "148.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "149.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "150.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "151.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "152.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "153.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "154.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "155.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Mark",
+    "rate": 1,
+    "file": "156.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "157.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "158.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "159.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "160.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "161.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "162.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "163.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "164.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "165.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "166.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "167.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "168.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Zira",
+    "rate": -1,
+    "file": "169.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Samantha!",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "170.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, turn on the front light.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "171.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Samantha, what time is it?",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "172.wav",
+    "label": "positive"
+  },
+  {
+    "text": "Amanda, turn on the front light.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "173.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Savannah, what time is it?",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "174.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Santa is coming.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "175.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Some other lights are still on.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "176.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Sam and the others are home.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "177.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Scarlett, open the bedroom lights.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "178.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Good morning, how are you?",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "179.wav",
+    "label": "negative"
+  },
+  {
+    "text": "The bedroom lights are on.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "180.wav",
+    "label": "negative"
+  },
+  {
+    "text": "I am going to the grocery store.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "181.wav",
+    "label": "negative"
+  },
+  {
+    "text": "Turn off the television please.",
+    "voice": "Microsoft Zira",
+    "rate": 1,
+    "file": "182.wav",
+    "label": "negative"
+  }
+]

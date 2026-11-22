@@ -1,0 +1,19 @@
+[Unit]
+Description=EchoMuse local Whisper English speech recognition
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/projects/wyoming-faster-whisper
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=%h/.config/echomuse/whisper.env
+Environment=HF_HUB_OFFLINE=1
+Environment=HF_HUB_DISABLE_TELEMETRY=1
+ExecStart=%h/projects/wyoming-faster-whisper/.venv/bin/python -m wyoming_faster_whisper --uri tcp://127.0.0.1:10300 --model ${WHISPER_MODEL} --stt-library faster-whisper --language en --device cpu --compute-type int8 --beam-size 5 --cpu-threads 8 --data-dir %h/.cache/echomuse-whisper/models --download-dir %h/.cache/echomuse-whisper/models --local-files-only
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=180
+TimeoutStopSec=15
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,8 @@
+{
+  "model_revisions": {
+    "unsloth/orpheus-3b-0.1-ft": "eae2b6e5e429c81b95ac42a883ac64f126583d43",
+    "unsloth/orpheus-3b-0.1-ft-unsloth-bnb-4bit": "c014246a7cd64459982546b5c98524c7c7ee8bc1",
+    "hubertsiuzdak/snac_24khz": "d73ad176a12188fcf4f360ba3bf2c2fbbe8f58ec"
+  },
+  "snac_version": "1.2.1"
+}

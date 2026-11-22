@@ -1,0 +1,38 @@
+get_home_weather_forecast:
+  alias: Get home weather forecast
+  description: >-
+    Read-only weather tool for the home's configured Met.no weather entity.
+    Returns current conditions and daily forecasts, including local dates.
+    Use this for today's or tomorrow's home weather and next-week forecasts
+    instead of generic web search. Do not treat current conditions as a forecast.
+  mode: single
+  sequence:
+    - action: weather.get_forecasts
+      target:
+        entity_id: weather.home
+      data:
+        type: daily
+      response_variable: forecast_data
+    - variables:
+        result: >-
+          {% set rows = namespace(items=[]) %}
+          {% for day in forecast_data.get('weather.home', {}).get('forecast', [])[:7] %}
+            {% set rows.items = rows.items + [dict(day, local_date=(as_local(as_datetime(day['datetime'])).date() | string))] %}
+          {% endfor %}
+          {{ {
+            'local_date': now().date() | string,
+            'time_zone': now().tzinfo | string,
+            'retrieved_at': now().isoformat(),
+            'source': 'Home Assistant Met.no',
+            'temperature_unit': state_attr('weather.home', 'temperature_unit'),
+            'precipitation_unit': state_attr('weather.home', 'precipitation_unit'),
+            'wind_speed_unit': state_attr('weather.home', 'wind_speed_unit'),
+            'current': {
+              'condition': states('weather.home'),
+              'temperature': state_attr('weather.home', 'temperature'),
+              'humidity': state_attr('weather.home', 'humidity')
+            },
+            'forecast': rows.items
+          } }}
+    - stop: Return home weather forecast
+      response_variable: result

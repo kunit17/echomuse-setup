@@ -1,0 +1,13 @@
+[Unit]
+Description=She GPT-SoVITS V2ProPlus warm TTS server
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/voiceuser/projects/gpt-sovits
+ExecStart=/bin/bash -c 'source /home/voiceuser/projects/gpt-sovits/scripts/env.sh; exec /home/voiceuser/projects/gpt-sovits/.venv/bin/python /home/voiceuser/projects/gpt-sovits/scripts/serve_tts.py'
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

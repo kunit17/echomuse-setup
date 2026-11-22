@@ -1,0 +1,66 @@
+<!doctype html><meta charset="utf-8"><title>Orpheus streaming benchmark</title>
+<style>body{font:17px system-ui;max-width:1050px;margin:40px auto;padding:0 24px;background:#111827;color:#e5e7eb}button,textarea{font:inherit;padding:12px;border-radius:8px}textarea{width:95%;height:85px}a{color:#93c5fd}table{border-collapse:collapse;width:100%}td,th{padding:12px;text-align:left;border-bottom:1px solid #374151}audio{max-width:300px}pre{white-space:pre-wrap}</style>
+<h1>Orpheus epoch 3 · streaming benchmark</h1>
+<p>The live test uses a 1-second audio buffer and sentence-by-sentence generation. The table below preserves the original benchmark with a 500 ms buffer and whole-passage generation. RTF below 1 means generation is faster than playback. Buffered MP3 files are for voice quality; smooth MP3 playback does not prove live streaming is continuous.</p>
+<p id="state">Loading results…</p>
+<p id="checks"></p>
+<textarea id="text">How was your day today Tony? I've been thinking about you a lot lately. I had the strangest dream of you.</textarea><p><button id="play">Test live stream</button></p><pre id="result"></pre><div id="buffered"></div><div id="comparisons"></div>
+<script>
+const $=id=>document.getElementById(id);window.benchmarkResult=null;
+async function playStream(){
+  $('play').disabled=true;const context=new AudioContext({sampleRate:24000});await context.resume();
+  await context.audioWorklet.addModule('/worklet.js');const player=new AudioWorkletNode(context,'pcm-player');player.connect(context.destination);
+  const start=performance.now();let firstPlayback=null;let completion;
+  const finished=new Promise(resolve=>completion=resolve);
+  player.port.onmessage=({data})=>{
+    if(data.firstPlayback)firstPlayback=(performance.now()-start)/1000;
+    if(data.done)completion(data);
+  };
+  try {
+    const response=await fetch('/stream',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:$('text').value})});
+    if(!response.ok)throw Error(await response.text());const id=response.headers.get('X-Request-ID');
+    const reader=response.body.getReader();let carry=new Uint8Array(0);const arrivals=[];
+    for(;;){const {done,value}=await reader.read();if(done)break;
+      const bytes=new Uint8Array(carry.length+value.length);bytes.set(carry);bytes.set(value,carry.length);
+      const n=bytes.length-bytes.length%2;const view=new DataView(bytes.buffer);const audio=new Float32Array(n/2);
+      for(let i=0;i<audio.length;i++)audio[i]=view.getInt16(i*2,true)/32768;
+      carry=bytes.slice(n);arrivals.push([(performance.now()-start)/1000,audio.length/24000]);
+      player.port.postMessage({audio},[audio.buffer]);
+    }
+    if(carry.length)throw Error('Incomplete PCM sample');player.port.postMessage({end:true});
+    const playback=await finished;let trace;
+    for(let i=0;i<20;i++){const r=await fetch('/trace/'+id);if(r.ok){trace=await r.json();break;}await new Promise(r=>setTimeout(r,100));}
+    if(trace?.status!=='complete')throw Error('Server did not confirm complete generation');
+    if(playback.samples!==trace.sample_count)throw Error('Playback sample count differs from completed stream');
+    window.benchmarkResult={status:'complete',firstPlayback,...playback,arrivals,traceId:id,bufferSeconds:trace.health.playback_buffer_seconds,sentences:trace.sentences?.length};
+    $('result').textContent=window.productionVoice?'Playback complete · started after '+firstPlayback.toFixed(2)+' seconds · '+playback.underruns+' interruptions':JSON.stringify(window.benchmarkResult,null,2);
+  } catch(error){window.benchmarkResult={status:'failed',error:String(error)};$('result').textContent=String(error);}
+  finally{await context.close();$('play').disabled=false;}
+}
+$('play').onclick=playStream;
+fetch('/health').then(r=>r.json()).then(health=>{
+  if(health.port!==8812||health.runtime!=='vllm-streaming')return;
+  window.productionVoice=true;document.title='Orpheus voice';document.querySelector('h1').textContent='Orpheus voice';
+  document.querySelector('h1 + p').textContent='Enter your text and press Speak. Audio starts once one second is ready.';
+  $('play').textContent='Speak';
+  for(const id of ['state','checks','buffered','comparisons'])$(id).hidden=true;
+}).catch(()=>{});
+fetch('/report').then(r=>r.json()).then(report=>{
+  $('state').textContent=report.status+' · Automated checks do not replace listening review.';
+  $('checks').textContent=report.asr_interpretation?.note||'';
+  if(report.current_live_policy_validation){
+    const title=document.createElement('h2');title.textContent='Updated: 1-second buffer + sentence generation';$('buffered').append(title);
+    for(const sample of report.current_live_policy_validation.samples){
+      const item=document.createElement('p');item.textContent=(sample.label.includes('tony')?'Tony sample':'Long passage')+' · starts after '+sample.first_playback_seconds.toFixed(2)+' seconds · '+sample.underruns+' playback pauses';
+      const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src='/audio/'+sample.file;item.append(document.createElement('br'),audio);$('buffered').append(item);
+    }
+  }
+  const table=document.createElement('table');table.innerHTML='<tr><th>Configuration</th><th>RTF p95</th><th>First playback p95</th><th>Underruns</th><th>ASR flagged</th><th>Samples</th></tr>';
+  for(const row of report.configurations||[]){const tr=document.createElement('tr');
+    for(const v of [row.name,row.p95_rtf?.toFixed(2),row.p95_first_playback?.toFixed(2)+' s',row.underruns,row.asr_flagged??'pending']){const td=document.createElement('td');td.textContent=v;tr.append(td);}
+    const td=document.createElement('td');for(const sample of row.examples||[]){const p=document.createElement('p');p.textContent=sample.prompt+' ';const a=document.createElement('audio');a.controls=true;a.preload='none';a.src='/audio/'+sample.file;p.append(a);td.append(p);}tr.append(td);table.append(tr);
+  }$('comparisons').append(table);
+}).catch(e=>$('state').textContent=String(e));
+const params=new URLSearchParams(location.search);if(params.has('text'))$('text').value=params.get('text');
+if(params.get('probe')==='1')setTimeout(playStream,500);
+</script>

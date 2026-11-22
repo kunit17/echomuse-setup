@@ -7,7 +7,8 @@ def main(mode,precision):
     from torch.utils.data import Dataset,Subset
     from transformers import Trainer,TrainingArguments,TrainerCallback,set_seed
     dataset=json.loads((DATA/'dataset.json').read_text())
-    assert dataset['clips']==1204 and dataset['max_tokens']<=4096
+    assert dataset['clips'] > 1 and dataset['max_tokens']<=4096
+    assert all(dataset['splits'].get(s) for s in ['train','validation'])
     assert all(sha(CORPUS/s/'manifest.csv')==v for s,v in dataset['source_manifests'].items())
     smoke=mode!='train';directory=RUN/('smoke-'+precision if smoke else 'checkpoints')
     model_name=QUANT if precision=='4bit' else MODEL
@@ -116,7 +117,7 @@ def main(mode,precision):
         checkpoints=list(directory.glob('checkpoint-*'))
         if checkpoints:resume=str(max(checkpoints,key=lambda p:int(p.name.split('-')[-1])))
     status(status='preflight' if smoke else 'training',mode=mode,precision=precision,resume_from=resume,
-        train_clips=1083,validation_clips=121,trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad))
+        train_clips=len(dataset['splits']['train']),validation_clips=len(dataset['splits']['validation']),trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad))
     started=time.time();result=trainer.train(resume_from_checkpoint=resume)
     metrics=trainer.evaluate() if smoke else {}
     if smoke:

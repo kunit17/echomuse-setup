@@ -64,7 +64,7 @@ def main():
                     assert np.isfinite(decoded).all()
                     sf.write(dest,decoded,24000,subtype='PCM_16')
                 qa.append(dict(id=row['id'],text=row['text'],original=str(path),roundtrip=str(dest),split=split))
-            if count%10==0:status(status='encoding',prepared=count,total_clips=1204)
+            if count%10==0:status(status='encoding',prepared=count)
         splits[split]=output
     all_items=[json.loads(Path(p).read_text()) for group in splits.values() for p in group]
     assert not ({r['audio_sha256'] for r in all_items if r['split']=='train'} & {r['audio_sha256'] for r in all_items if r['split']=='validation'})
